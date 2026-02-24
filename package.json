@@ -1,0 +1,21 @@
+{
+  "name": "example-webhook-handler-ts",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "start:crash": "bun run src/index.ts --crash"
+  },
+  "dependencies": {
+    "@resonatehq/sdk": "^0.9.6",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
