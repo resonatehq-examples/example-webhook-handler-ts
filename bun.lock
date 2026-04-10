@@ -4,7 +4,7 @@
     "": {
       "name": "example-webhook-handler-ts",
       "dependencies": {
-        "@resonatehq/sdk": "^0.9.6",
+        "@resonatehq/sdk": "^0.10.0",
         "express": "^4.21.2",
       },
       "devDependencies": {
@@ -17,7 +17,7 @@
     },
   },
   "packages": {
-    "@resonatehq/sdk": ["@resonatehq/sdk@0.9.6", "", { "dependencies": { "cron-parser": "^5.3.0", "eventsource": "^4.0.0" } }, "sha512-8U75H2qgC4BJOW76vtLTaFibMNGbGvIIF8hubc4eDU+5woqSX18kYh8EA9eZQOYx4cNH3m8OWS66RwVZnyYL3g=="],
+    "@resonatehq/sdk": ["@resonatehq/sdk@0.10.0", "", { "dependencies": { "cron-parser": "^5.3.0", "eventsource": "^4.0.0" } }, "sha512-iasZ8atAzsAhH8suNwmhyx3f8kgpBb38rWnWKdATZRZx0Ugw+nyvfjvnaeTbpQG4qlMtQinPUgG4liSUzDa1AQ=="],
 
     "@types/body-parser": ["@types/body-parser@1.19.6", "", { "dependencies": { "@types/connect": "*", "@types/node": "*" } }, "sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g=="],
 
