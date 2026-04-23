@@ -136,21 +136,13 @@ example-webhook-handler-ts/
 
 **Lines of code**: ~200 total, ~20 lines of workflow logic.
 
-## Comparison
+## Dedup by promise ID
 
-Restate's webhook callbacks example ([github](https://github.com/restatedev/examples/tree/main/typescript/patterns-use-cases/src/webhookcallbacks)) uses virtual objects with `objectSendClient` for routing and state management (~50 LOC for the pattern layer alone). DBOS calls this "exactly-once transactions" and requires their decorator pattern and schema registration.
+The deduplication mechanism is the promise ID itself. When the webhook handler calls `resonate.run(eventId, processPayment, ...)`, the `eventId` becomes the durable promise ID. A second invocation with the same `eventId` returns the cached result of the first — no re-execution, no double-charge, no separate idempotency table to maintain.
 
-Resonate's approach: the promise ID is the deduplication key. No additional infrastructure. The same mechanism that provides durability provides idempotency.
-
-| | Resonate | Restate | DBOS |
-|---|---|---|---|
-| Dedup mechanism | Promise ID | Virtual object key | Transaction decorator |
-| Extra infrastructure | None | Restate server | DBOS server + Postgres |
-| Workflow code | 20 LOC | ~50 LOC | ~40 LOC |
-| Setup | `bun install && bun start` | Docker Compose | DBOS CLI + schema migration |
+The same mechanism that provides durability provides idempotency. That's it.
 
 ## Learn More
 
 - [Resonate documentation](https://docs.resonatehq.io)
-- [Restate webhook callbacks](https://github.com/restatedev/examples/tree/main/typescript/patterns-use-cases/src/webhookcallbacks)
-- [Stripe webhook best practices](https://stripe.com/docs/webhooks/best-practices)
+- [Stripe webhook best practices](https://stripe.com/docs/webhooks/best-practices) — upstream guidance on webhook dedup at the provider boundary
