@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.png">
+    <img alt="Webhook Handler — Resonate example" src="./assets/banner-dark.png">
+  </picture>
+</p>
+
 # Webhook Handler
 
 Exactly-once webhook processing with automatic deduplication. Models a Stripe-style payment webhook receiver: validate → charge → receipt → ledger. If the webhook is retried (network timeout, slow ACK), the payment is not processed twice — Resonate deduplicates via the event ID.
