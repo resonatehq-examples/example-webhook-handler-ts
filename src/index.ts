@@ -154,3 +154,4 @@ if (simulateCrash) {
 }
 
 server.close();
+resonate.stop();
