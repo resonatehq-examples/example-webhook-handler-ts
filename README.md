@@ -6,6 +6,12 @@
   </picture>
 </p>
 
+<p align="center">
+  <a href="https://resonatehq.github.io/examples-ci/">
+    <img src="https://img.shields.io/endpoint?url=https://resonatehq.github.io/examples-ci/status/example-webhook-handler-ts.json" alt="examples-ci status">
+  </a>
+</p>
+
 # Webhook Handler
 
 Exactly-once webhook processing with automatic deduplication. Models a Stripe-style payment webhook receiver: validate → charge → receipt → ledger. If the webhook is retried (network timeout, slow ACK), the payment is not processed twice — Resonate deduplicates via the event ID.
