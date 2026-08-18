@@ -4,7 +4,7 @@
     "": {
       "name": "example-webhook-handler-ts",
       "dependencies": {
-        "@resonatehq/sdk": "^0.10.0",
+        "@resonatehq/sdk": "^0.11.4",
         "express": "^4.21.2",
       },
       "devDependencies": {
@@ -17,7 +17,7 @@
     },
   },
   "packages": {
-    "@resonatehq/sdk": ["@resonatehq/sdk@0.10.0", "", { "dependencies": { "cron-parser": "^5.3.0", "eventsource": "^4.0.0" } }, "sha512-iasZ8atAzsAhH8suNwmhyx3f8kgpBb38rWnWKdATZRZx0Ugw+nyvfjvnaeTbpQG4qlMtQinPUgG4liSUzDa1AQ=="],
+    "@resonatehq/sdk": ["@resonatehq/sdk@0.11.4", "", { "dependencies": { "cron-parser": "^5.3.0", "eventsource": "^4.0.0" }, "peerDependencies": { "@nats-io/transport-node": "^3.0.0", "pg": "^8.11.0" }, "optionalPeers": ["@nats-io/transport-node", "pg"] }, "sha512-6Eb3poLgx2MuOGv/N+QbLNyEZSxcyU7cL5tjpQ8SD6h6UuHCJ2YEINtGCsqK8zcxBCAabBLyeCCjSVFiefFCCg=="],
 
     "@types/body-parser": ["@types/body-parser@1.19.6", "", { "dependencies": { "@types/connect": "*", "@types/node": "*" } }, "sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g=="],
 
